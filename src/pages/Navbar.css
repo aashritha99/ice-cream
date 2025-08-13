@@ -21,6 +21,7 @@
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 .nav-link {
   color: #333;
@@ -31,9 +32,41 @@
   cursor: pointer;
   font-weight: 500;
   transition: color 0.2s;
+  position: relative;
 }
 .nav-link:hover {
   color: #f6416c;
+}
+.nav-flavours-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.flavours-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120%;
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(31,38,135,0.12);
+  min-width: 120px;
+  padding: 0.5rem 0.7rem;
+  z-index: 10;
+}
+.nav-flavours-dropdown:hover .flavours-list {
+  display: block;
+}
+.flavour-item {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  color: #f6416c;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.flavour-item:hover {
+  background: #ffe6ef;
 }
 .logout-btn {
   background: linear-gradient(90deg, #f6416c 0%, #ff69b4 100%);

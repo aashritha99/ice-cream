@@ -1,0 +1,61 @@
+.glass-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  text-align: center;
+}
+.ice-cream-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 1.5rem;
+}
+.ice-cream-3d {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  margin: 0 auto 1rem auto;
+  perspective: 600px;
+}
+.cone {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotateX(20deg);
+  width: 60px;
+  height: 100px;
+  background: linear-gradient(135deg, #f9d29d 60%, #e7a977 100%);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.scoop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #fff6b7 60%, #f6416c 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(246,65,108,0.2);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ice-cream-3d:hover .scoop {
+  box-shadow: 0 16px 48px rgba(246,65,108,0.4);
+  transform: translateX(-50%) scale(1.1);
+}
+.ice-cream-3d:hover .cone {
+  transform: translateX(-50%) rotateX(40deg) scale(1.05);
+}
+.hover-info {
+  color: #333;
+  font-size: 1rem;
+  margin-top: 1rem;
+}

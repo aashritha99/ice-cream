@@ -37,12 +37,14 @@
 .nav-link:hover {
   color: #f6416c;
 }
+/* Flavours horizontal list */
+/* Dropdown styles for Flavours */
 .nav-flavours-dropdown {
   position: relative;
   display: inline-block;
 }
 .flavours-list {
-  display: none;
+  display: block;
   position: absolute;
   left: 0;
   top: 120%;
@@ -52,9 +54,6 @@
   min-width: 120px;
   padding: 0.5rem 0.7rem;
   z-index: 10;
-}
-.nav-flavours-dropdown:hover .flavours-list {
-  display: block;
 }
 .flavour-item {
   display: block;
